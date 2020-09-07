@@ -6,23 +6,17 @@ import random
 import re
 import sys
 
-#6
-#0 0 0 1 0 0
 # Complete the jumpingOnClouds function below.
 def jumpingOnClouds(c):
     count = 0
-    prev = 0
-
-    for i, _ in enumerate(c):
-        if i < prev:
-            continue
-
-        if len(c)-1 >= i+2 and c[i+2] != 1:
+    i = 0
+    while i < len(c) - 1:
+        if i + 2 < len(c) and c[i+2] == 0:
             count += 1
-            prev += 2
-        elif len(c)-1 >= i+1 and c[i+1] != 1:
-            count += 1
-            prev += 1
+            i += 2
+        else:
+            count +=1
+            i += 1
     return count
 
 
