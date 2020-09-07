@@ -8,22 +8,17 @@ import sys
 
 # Complete the countingValleys function below.
 def countingValleys(n, s):
-    sea_level = 0
+    altitude = 0
     count = 0
-    start_flg = False
     for i in range(n):
         step = s[i]
         if step == 'U':
-            sea_level += 1
+            if altitude == -1:
+                count += 1
+
+            altitude += 1
         else:
-            sea_level -= 1
-
-        if sea_level == -1:
-            start_flg = True
-
-        if start_flg and sea_level == 0:
-            count += 1
-            start_flg = False
+            altitude -= 1
     return count
 
 if __name__ == '__main__':
