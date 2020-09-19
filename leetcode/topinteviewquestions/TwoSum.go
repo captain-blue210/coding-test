@@ -1,4 +1,4 @@
-package TopInterviewQuestions
+package topinteviewquestions
 
 func twoSum(nums []int, target int) []int {
 	for i, num1 := range nums {

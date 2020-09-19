@@ -1,4 +1,4 @@
-package TopInterviewQuestions
+package topinteviewquestions
 
 import "strings"
 
