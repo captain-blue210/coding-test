@@ -1,4 +1,4 @@
-import { maxSubArray } from "../src/leetcode/topinteviewquestions/2025/MaximumSubarray";
+import { maxSubArray } from "../src/leetcode/2025/MaximumSubarray";
 
 describe("MaxiumSubarray test", () => {
   test("should return 1", () => {
