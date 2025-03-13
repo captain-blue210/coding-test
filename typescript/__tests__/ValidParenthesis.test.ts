@@ -1,4 +1,4 @@
-import { isValid } from "../src/leetcode/topinteviewquestions/2025/ValidParenthesis";
+import { isValid } from "../src/leetcode/2025/ValidParenthesis";
 
 describe("Valid Parentheses", () => {
   test("Empty string returns true", () => {

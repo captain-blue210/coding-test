@@ -1,7 +1,7 @@
 import {
-  ListNode,
-  reverseList,
-} from "../src/leetcode/topinteviewquestions/2025/ReverseLinkedList";
+   ListNode,
+   reverseList,
+} from "../src/leetcode/2025/ReverseLinkedList";
 
 describe("Reverse Linked List", () => {
   test("Empty input returns null", () => {
