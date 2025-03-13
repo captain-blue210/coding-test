@@ -19,5 +19,6 @@ describe("Maximum Depth of Binary Tree", () => {
       new TreeNode(9),
       new TreeNode(20, new TreeNode(15), new TreeNode(7))
     );
+    expect(maxDepth(given)).toBe(3);
   });
 });
