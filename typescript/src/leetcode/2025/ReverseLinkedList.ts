@@ -12,7 +12,7 @@ export class ListNode {
 }
 
 export function reverseList(head: ListNode | null): ListNode | null {
-  if (head == null) {
+  if (head == null || head.next == null) {
     return null;
   }
 
