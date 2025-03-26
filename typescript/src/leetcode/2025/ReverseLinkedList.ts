@@ -1,15 +1,4 @@
-/**
- * Definition for singly-linked list.
- */
-
-export class ListNode {
-  val: number;
-  next: ListNode | null;
-  constructor(val?: number, next?: ListNode | null) {
-    this.val = val === undefined ? 0 : val;
-    this.next = next === undefined ? null : next;
-  }
-}
+import { ListNode } from "./util/ListNode";
 
 export function reverseList(head: ListNode | null): ListNode | null {
   if (head == null || head.next == null) {
