@@ -14,7 +14,7 @@ export class MyQueue {
 
   pop(): number {
     this.moveToOutputStack();
-    return this.outputStack.pop();
+    return this.outputStack.pop()!;
   }
 
   peek(): number {
@@ -29,7 +29,7 @@ export class MyQueue {
   private moveToOutputStack() {
     if (this.outputStack.length === 0) {
       while (this.inputStack.length > 0) {
-        this.outputStack.push(this.inputStack.pop());
+        this.outputStack.push(this.inputStack.pop()!);
       }
     }
   }
