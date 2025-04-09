@@ -11,5 +11,5 @@ describe("dailyTemperatures", () => {
     expect(dailyTemperatures(given)).toEqual([1, 1, 1, 0]);
   });
 
-  it("should return");
+  // it("should return");
 });
