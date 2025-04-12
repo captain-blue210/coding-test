@@ -10,7 +10,5 @@ export function majorityElement(nums: number[]): number {
     }
   }
 
-  return Array.from(countMap.entries())
-    .filter(([_, count]) => count > halfNum)
-    .map(([num]) => num)[0];
+  return [...countMap].find(([_, count]) => count > halfNum)![0];
 }
