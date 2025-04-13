@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { majorityElement } from "../src/leetcode/2025/MajorityElement";
+import { majorityElement } from "./MajorityElement"; // Updated path
 
 describe("majorityElement", () => {
   it("should return the majority element for [3,2,3]", () => {
