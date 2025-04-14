@@ -1,7 +1,5 @@
-import {
-   ListNode,
-   reverseList,
-} from "../src/leetcode/2025/ReverseLinkedList";
+import { reverseList } from "./ReverseLinkedList";
+import { ListNode } from "./util/ListNode";
 
 describe("Reverse Linked List", () => {
   test("Empty input returns null", () => {

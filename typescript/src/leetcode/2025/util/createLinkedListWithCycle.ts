@@ -1,4 +1,4 @@
-import { ListNode } from "../../src/leetcode/2025/util/ListNode";
+import { ListNode } from "./ListNode";
 
 export function createLinkedListWithCycle(
   values: number[],
