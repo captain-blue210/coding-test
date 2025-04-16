@@ -1,6 +1,6 @@
 // src/__tests__/firstUniqChar.test.ts
 import { describe, expect, it } from "vitest";
-import { firstUniqChar } from "../src/leetcode/2025/FirstUniqueChar";
+import { firstUniqChar } from "./FirstUniqueChar";
 
 describe("First Unique Character in a String", () => {
   it('文字列 "leetcode" の最初の一意文字のインデックスは 0', () => {
