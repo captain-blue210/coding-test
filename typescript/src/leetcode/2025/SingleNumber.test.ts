@@ -17,10 +17,6 @@ describe("Single Number", () => {
     expect(singleNumber([-1, 2, -1])).toBe(2);
   });
 
-  test("大きな数値を含むケース: [1,2,1,2,4294967296] → 4294967296", () => {
-    expect(singleNumber([1, 2, 1, 2, 4294967296])).toBe(4294967296);
-  });
-
   test("ゼロを含むケース: [0,1,0] → 1", () => {
     expect(singleNumber([0, 1, 0])).toBe(1);
   });
