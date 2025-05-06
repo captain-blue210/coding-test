@@ -1,20 +1,23 @@
 import { TreeNode } from "./util/TreeNode";
 
+/**
+ * 中順走査（in-order traversal）で値を配列に格納する関数
+ * @param node 現在のノード
+ * @param values 値を格納する配列
+ */
+function inOrderTraversal(node: TreeNode | null, values: number[]): void {
+  if (node === null) return;
+
+  inOrderTraversal(node.left, values);
+  values.push(node.val);
+  inOrderTraversal(node.right, values);
+}
+
 export function getMinimumDifference(root: TreeNode | null): number {
   if (root === null) return 0;
 
-  // 中順走査（in-order traversal）で値を配列に格納
   const values: number[] = [];
-
-  const inOrderTraversal = (node: TreeNode | null) => {
-    if (node === null) return;
-
-    inOrderTraversal(node.left);
-    values.push(node.val);
-    inOrderTraversal(node.right);
-  };
-
-  inOrderTraversal(root);
+  inOrderTraversal(root, values);
 
   // 配列の要素が1つ以下の場合は差を計算できないので0を返す
   if (values.length <= 1) return 0;
