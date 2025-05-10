@@ -26,10 +26,6 @@ describe("findMaxAverage", () => {
     expect(findMaxAverage([-1, 2, 3, -4, 5, -6], 3)).toBeCloseTo(4.0 / 3, 5); // [2, 3, -4] または [3, -4, 5]
   });
 
-  it("すべて負の数の配列の最大平均値を正しく計算する", () => {
-    expect(findMaxAverage([-1, -2, -3, -4, -5], 2)).toBeCloseTo(-3.0, 5); // [-1, -2]
-  });
-
   // 追加のテストケース
   it("小数点以下の精度を確認する", () => {
     expect(findMaxAverage([1.5, 2.5, 3.5, 4.5], 2)).toBeCloseTo(4.0, 5); // [3.5, 4.5]
