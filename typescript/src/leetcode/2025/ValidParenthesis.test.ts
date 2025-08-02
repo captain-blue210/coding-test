@@ -1,27 +1,27 @@
-import { isValid } from "../src/leetcode/2025/ValidParenthesis";
+import { isValid } from './ValidParenthesis';
 
-describe("Valid Parentheses", () => {
-  test("Empty string returns true", () => {
-    expect(isValid("")).toBe(true);
+describe('Valid Parentheses', () => {
+  test('Empty string returns true', () => {
+    expect(isValid('')).toBe(true);
   });
 
   test('"()" returns true', () => {
-    expect(isValid("()")).toBe(true);
+    expect(isValid('()')).toBe(true);
   });
 
   test('"()[]{}" returns true', () => {
-    expect(isValid("()[]{}")).toBe(true);
+    expect(isValid('()[]{}')).toBe(true);
   });
 
   test('"(]" returns false', () => {
-    expect(isValid("(]")).toBe(false);
+    expect(isValid('(]')).toBe(false);
   });
 
   test('"([)]" returns false', () => {
-    expect(isValid("([)]")).toBe(false);
+    expect(isValid('([)]')).toBe(false);
   });
 
   test('"{[]}" returns true', () => {
-    expect(isValid("{[]}")).toBe(true);
+    expect(isValid('{[]}')).toBe(true);
   });
 });

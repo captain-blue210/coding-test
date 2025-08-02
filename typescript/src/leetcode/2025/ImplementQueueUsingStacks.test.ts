@@ -1,7 +1,7 @@
-import { beforeEach, describe, expect, it } from "vitest";
-import { MyQueue } from "../src/leetcode/2025/ImplementQueueUsingStacks";
+import { beforeEach, describe, expect, it } from 'vitest';
+import { MyQueue } from './ImplementQueueUsingStacks';
 
-describe("MyQueue: スタックを用いたキューの実装", () => {
+describe('MyQueue: スタックを用いたキューの実装', () => {
   let myQueue: MyQueue;
 
   // 各テストケースの前に、新しいMyQueueインスタンスを作成
@@ -9,12 +9,12 @@ describe("MyQueue: スタックを用いたキューの実装", () => {
     myQueue = new MyQueue();
   });
 
-  it("テストケース1: 初期状態ではキューは空であるべき", () => {
+  it('テストケース1: 初期状態ではキューは空であるべき', () => {
     // empty() メソッドが true を返すことを確認
     expect(myQueue.empty()).toBe(true);
   });
 
-  it("テストケース2: push操作後にキューは空ではなくなるべき", () => {
+  it('テストケース2: push操作後にキューは空ではなくなるべき', () => {
     // 要素を1つpushした後、empty() が false になることを確認
     myQueue.push(1);
     expect(myQueue.empty()).toBe(false);
@@ -23,7 +23,7 @@ describe("MyQueue: スタックを用いたキューの実装", () => {
     expect(myQueue.empty()).toBe(false);
   });
 
-  it("テストケース3: peek操作は先頭要素を削除せずに返す", () => {
+  it('テストケース3: peek操作は先頭要素を削除せずに返す', () => {
     myQueue.push(1);
     myQueue.push(2);
     // 最初のpeek() は先頭の 1 を返す
@@ -34,7 +34,7 @@ describe("MyQueue: スタックを用いたキューの実装", () => {
     expect(myQueue.empty()).toBe(false);
   });
 
-  it("テストケース4: pop操作はFIFO（先入れ先出し）順で要素を削除して返す", () => {
+  it('テストケース4: pop操作はFIFO（先入れ先出し）順で要素を削除して返す', () => {
     myQueue.push(1); // キュー: [1]
     myQueue.push(2); // キュー: [1, 2]
     myQueue.push(3); // キュー: [1, 2, 3]
@@ -53,7 +53,7 @@ describe("MyQueue: スタックを用いたキューの実装", () => {
     expect(myQueue.empty()).toBe(true);
   });
 
-  it("テストケース5: 空のキューに対するpeek操作の挙動 (LeetCode制約外)", () => {
+  it('テストケース5: 空のキューに対するpeek操作の挙動 (LeetCode制約外)', () => {
     // LeetCodeの制約「All the calls to pop and peek are valid」により、
     // 実際のLeetCode提出時にはこのケースは発生しない想定。
     // 実装によってはエラーを投げるか、null/undefined等を返す可能性がある。
@@ -61,7 +61,7 @@ describe("MyQueue: スタックを用いたキューの実装", () => {
     expect(myQueue.peek()).toBeUndefined();
   });
 
-  it("テストケース6: 空のキューに対するpop操作の挙動 (LeetCode制約外)", () => {
+  it('テストケース6: 空のキューに対するpop操作の挙動 (LeetCode制約外)', () => {
     // LeetCodeの制約「All the calls to pop and peek are valid」により、
     // 実際のLeetCode提出時にはこのケースは発生しない想定。
     // 実装によってはエラーを投げるか、null/undefined等を返す可能性がある。
@@ -69,7 +69,7 @@ describe("MyQueue: スタックを用いたキューの実装", () => {
     expect(myQueue.pop()).toBeUndefined();
   });
 
-  it("テストケース7: emptyステータスが正しく更新されるか", () => {
+  it('テストケース7: emptyステータスが正しく更新されるか', () => {
     // 初期状態は空
     expect(myQueue.empty()).toBe(true);
     // push後、空ではない
@@ -80,7 +80,7 @@ describe("MyQueue: スタックを用いたキューの実装", () => {
     expect(myQueue.empty()).toBe(true);
   });
 
-  it("テストケース8: LeetCode Example 1 の操作シーケンス", () => {
+  it('テストケース8: LeetCode Example 1 の操作シーケンス', () => {
     // MyQueue myQueue = new MyQueue(); (beforeEachで実行済み)
     // myQueue.push(1);
     myQueue.push(1); // キュー: [1]
@@ -100,7 +100,7 @@ describe("MyQueue: スタックを用いたキューの実装", () => {
     expect(myQueue.empty()).toBe(true);
   });
 
-  it("テストケース9: 連続したpushとpopの組み合わせ", () => {
+  it('テストケース9: 連続したpushとpopの組み合わせ', () => {
     myQueue.push(1); // [1]
     myQueue.push(2); // [1, 2]
     expect(myQueue.pop()).toBe(1); // [2]

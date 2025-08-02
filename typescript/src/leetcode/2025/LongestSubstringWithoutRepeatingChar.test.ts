@@ -1,23 +1,23 @@
-import { lengthOfLongestSubstring } from "../src/leetcode/2025/LongestSubstringWithoutRepeatingChar";
+import { lengthOfLongestSubstring } from './LongestSubstringWithoutRepeatingChar';
 
-describe("lengthOfLongestSubstring", () => {
+describe('lengthOfLongestSubstring', () => {
   it('should return 3 when "abcabcbb" is given', () => {
-    const given: string = "abcabcbb";
+    const given: string = 'abcabcbb';
     expect(lengthOfLongestSubstring(given)).toBe(3);
   });
 
   it('should return 1 when "bbbbb" is given', () => {
-    const given: string = "bbbbb";
+    const given: string = 'bbbbb';
     expect(lengthOfLongestSubstring(given)).toBe(1);
   });
 
   it('should return 3 when "pwwkew" is given', () => {
-    const given: string = "pwwkew";
+    const given: string = 'pwwkew';
     expect(lengthOfLongestSubstring(given)).toBe(3);
   });
 
   it('should return 2 when "abba" is given', () => {
-    const given: string = "abba";
+    const given: string = 'abba';
     expect(lengthOfLongestSubstring(given)).toBe(2);
   });
 });

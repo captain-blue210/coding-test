@@ -13,5 +13,5 @@ export function productExceptSelf(nums: number[]): number[] {
     rightProduct *= nums[index];
   }
 
-  return result;
+  return result.map(num => (num === -0 ? 0 : num));
 }

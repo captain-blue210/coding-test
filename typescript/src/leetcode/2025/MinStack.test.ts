@@ -1,12 +1,12 @@
-import { MinStack } from "../src/leetcode/2025/MinStack";
+import { MinStack } from './MinStack';
 
-describe("MinStack", () => {
-  it("should initialize an empty stack", () => {
+describe('MinStack', () => {
+  it('should initialize an empty stack', () => {
     const minStack = new MinStack();
     expect(() => minStack.pop()).not.toThrow(); // 空スタックでのpopでエラーが出ないことを確認
   });
 
-  it("should handle basic operations", () => {
+  it('should handle basic operations', () => {
     const minStack = new MinStack();
 
     minStack.push(-2);
@@ -26,7 +26,7 @@ describe("MinStack", () => {
     expect(minStack.getMin()).toBe(-2);
   });
 
-  it("should handle duplicate values", () => {
+  it('should handle duplicate values', () => {
     const minStack = new MinStack();
 
     minStack.push(1);
@@ -40,7 +40,7 @@ describe("MinStack", () => {
     expect(minStack.getMin()).toBe(1);
   });
 
-  it("should handle a sequence of operations", () => {
+  it('should handle a sequence of operations', () => {
     const minStack = new MinStack();
 
     minStack.push(5);
@@ -64,7 +64,7 @@ describe("MinStack", () => {
     expect(minStack.getMin()).toBe(5);
   });
 
-  it("should handle edge cases with negative numbers", () => {
+  it('should handle edge cases with negative numbers', () => {
     const minStack = new MinStack();
 
     minStack.push(-10);

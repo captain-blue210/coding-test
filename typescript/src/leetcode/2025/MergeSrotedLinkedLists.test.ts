@@ -1,10 +1,8 @@
-import {
-  ListNode,
-  mergeTwoLists,
-} from "../src/leetcode/2025/MergeSrotedLinkedLists";
+import { mergeTwoLists } from './MergeSrotedLinkedLists';
+import { ListNode } from './util/ListNode';
 
-describe("mergeTwoLists", () => {
-  it("should return [1,1,2,3,4,4]", () => {
+describe('mergeTwoLists', () => {
+  it('should return [1,1,2,3,4,4]', () => {
     const list1: ListNode = new ListNode(1, new ListNode(2, new ListNode(4)));
     const list2: ListNode = new ListNode(1, new ListNode(3, new ListNode(4)));
     // [1,1,2,3,4,4]
