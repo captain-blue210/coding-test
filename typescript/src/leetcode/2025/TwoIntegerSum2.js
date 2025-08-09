@@ -5,18 +5,22 @@ class Solution {
    * @return {number[]}
    */
   twoSum(numbers, target) {
-    let right = 1;
+    let left = 0,
+      right = numbers.length - 1;
 
-    for (let left = 0; left < numbers.length; left++) {
-      while (right < numbers.length) {
-        console.log(`left: ${numbers[left]}, right: ${numbers[right]}`);
-        if (numbers[left] + numbers[right] === target) {
-          return [left + 1, right + 1];
-        } else {
-          right++;
-        }
+    while (left < right) {
+      if (numbers[left] + numbers[right] < target) {
+        left++;
       }
-      right = left + 1;
+
+      if (numbers[left] + numbers[right] > target) {
+        right--;
+      }
+
+      if (numbers[left] + numbers[right] === target) {
+        return [left + 1, right + 1];
+      }
     }
+    return [];
   }
 }
