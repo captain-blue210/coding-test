@@ -9,5 +9,13 @@
     "allowJs": true,
     "checkJs": true,
     "noEmit": true
-  }
+  },
+  "include": [
+    "typescript/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "javascript/**/*",
+    "python/**/*"
+  ]
 }
