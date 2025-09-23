@@ -8,33 +8,32 @@ class Solution {
     // s1の文字列をcount
     const s1CountMap = new Map();
     for (const c of s1) {
-      s1CountMap.set(c, s1CountMap.get(c) + 1 || 1);
+      s1CountMap.set(c, (s1CountMap.get(c) || 0) + 1);
     }
 
-    const windowLength = s1.length;
-    let result = false;
-    for (let i = 0; i <= s2.length - windowLength; i++) {
-      const sub = s2.slice(i, i + windowLength);
-      const subCountMap = new Map();
-      for (const c of sub) {
-        subCountMap.set(c, subCountMap.get(c) + 1 || 1);
-      }
-      // s1の文字列のcountとsliding window内の文字列のcountが同じかどうか
-      if (s1CountMap.size != subCountMap.size) continue;
+    const diff = new Map(s1CountMap);
 
-      let isEqual = true;
-      for (const key of s1CountMap.keys()) {
-        if (subCountMap.get(key) !== s1CountMap.get(key)) {
-          isEqual = false;
-          break;
-        }
-      }
+    const adjust = (map, key, diff) => {
+      const v = (map.get(key) || 0) + diff;
+      if (v === 0) map.delete(key);
+      else map.set(key, v);
+    };
 
-      if (isEqual) {
-        result = true;
-        break;
-      }
+    for (let i = 0; i < s1.length; i++) {
+      adjust(diff, s2[i], -1);
     }
-    return result;
+    if (diff.size === 0) return true;
+
+    // windowの右端がs2の末尾にくるまで動かす
+    for (let r = s1.length; r < s2.length; r++) {
+      const inChar = s2[r];
+      const outChar = s2[r - s1.length];
+
+      adjust(diff, inChar, -1);
+      adjust(diff, outChar, +1);
+
+      if (diff.size === 0) return true;
+    }
+    return false;
   }
 }
